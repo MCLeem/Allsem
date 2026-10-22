@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<script defer src="/_vercel/insights/script.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1:1 상담 문의 | 별내 올셈수학</title>
+<meta name="description" content="별내 올셈수학교습소 1:1 상담 문의. 무료 진단 상담, 수강·시간표 문의를 남겨주시면 원장이 직접 확인하고 연락드립니다.">
+<link rel="canonical" href="https://allsem.vercel.app/inquiry.html">
+<meta name="robots" content="index,follow">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root{--blue:#1A63E6;--navy:#0F2D6B;--ink:#111827;--body:#4B5563;--mute:#9AA3B2;--line:#E5EAF2;--bg2:#F4F7FF;--yellow:#FFD233;--pink:#E5486F}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Pretendard Variable',Pretendard,-apple-system,system-ui,'Malgun Gothic',sans-serif;color:var(--ink);background:#fff;line-height:1.7;word-break:keep-all;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.hdr{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--line);z-index:5}
+.hdr .in{max-width:880px;margin:0 auto;padding:0 24px;height:72px;display:flex;align-items:center;justify-content:space-between}
+.hdr img{height:38px}
+.hdr a.back{text-decoration:none;font-size:14px;font-weight:700;color:var(--navy);background:var(--bg2);padding:10px 16px;border-radius:999px}
+.top{background:linear-gradient(160deg,#2B83FF,#1448C8);color:#fff;padding:64px 24px 56px;text-align:center}
+.top h1{font-size:clamp(28px,4vw,40px);font-weight:800;letter-spacing:-0.03em}
+.top p{margin-top:8px;font-size:15px;color:rgba(255,255,255,.88)}
+main{max-width:880px;margin:0 auto;padding:48px 24px 96px}
+.info{display:flex;flex-wrap:wrap;gap:8px 24px;background:var(--bg2);border-radius:14px;padding:18px 22px;font-size:14px;color:var(--body)}
+.info b{color:var(--navy)}
+.board{margin-top:28px;border-top:2px solid var(--ink)}
+.row{display:grid;grid-template-columns:150px 1fr;border-bottom:1px solid var(--line)}
+.row>label,.row>.lb{background:#FAFBFD;padding:16px 18px;font-size:14px;font-weight:700;color:var(--navy)}
+.row>label i,.row>.lb i{color:var(--pink);font-style:normal;margin-left:2px}
+.row>div{padding:10px 16px}
+input[type=text],input[type=tel],input[type=email],select,textarea{width:100%;font:inherit;font-size:15px;color:var(--ink);border:1px solid #D5DCE7;border-radius:8px;padding:10px 12px;background:#fff}
+input:focus,select:focus,textarea:focus{outline:2px solid rgba(26,99,230,.25);border-color:var(--blue)}
+textarea{min-height:180px;resize:vertical}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.hint{margin-top:6px;font-size:13px;color:var(--mute)}
+.agree{margin-top:28px;border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+.agree h2{font-size:15px;font-weight:700;color:var(--navy)}
+.agree table{margin-top:10px;width:100%;border-collapse:collapse;font-size:13px}
+.agree th,.agree td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top;color:var(--body)}
+.agree th{background:#FAFBFD;color:var(--navy);width:24%;font-weight:700}
+.agree p{margin-top:8px;font-size:13px;color:var(--body)}
+.agree label{display:flex;align-items:center;gap:8px;margin-top:14px;font-size:15px;font-weight:700;cursor:pointer}
+.agree input{width:18px;height:18px;accent-color:var(--blue)}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.actions{display:flex;justify-content:center;gap:10px;margin-top:32px}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:52px;padding:0 32px;border-radius:10px;font:inherit;font-size:16px;font-weight:700;border:0;cursor:pointer;text-decoration:none}
+.btn.p{background:var(--blue);color:#fff}
+.btn.p:disabled{opacity:.6;cursor:default}
+.btn.s{background:var(--bg2);color:var(--navy)}
+.msg{display:none;margin-top:24px;border-radius:12px;padding:18px 20px;font-size:15px}
+.msg.ok{display:block;background:#EAF8F1;color:#0E7A4F}
+.msg.err{display:block;background:#FFF0F3;color:#B4234B}
+.ft{background:var(--navy);color:rgba(255,255,255,.7);font-size:13px;padding:36px 24px;text-align:center;line-height:1.9}
+.ft a{color:#fff}
+@media (max-width:640px){
+  .row{grid-template-columns:1fr}
+  .row>label,.row>.lb{padding:12px 14px 4px;background:#fff}
+  .row>div{padding:4px 14px 14px}
+  .two{grid-template-columns:1fr}
+  .agree th{width:30%}
+  .actions{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<header class="hdr"><div class="in"><a href="./"><img src="images/logo.png" alt="올셈수학"></a><a class="back" href="./">← 홈으로</a></div></header>
+<section class="top"><h1>1:1 상담 문의</h1><p>남겨주신 문의는 공개되지 않고 원장에게만 전달됩니다.</p></section>
+<main>
+<div class="info"><span><b>전화</b> <a href="tel:010-4667-8123">010-4667-8123</a></span><span><b>이메일</b> <a href="mailto:plus830418@naver.com">plus830418@naver.com</a></span><span>문의를 확인한 뒤 남겨주신 연락처로 연락드립니다.</span></div>
+
+<form id="qf" novalidate>
+<div class="board">
+  <div class="row"><label for="f-type">문의 유형<i>*</i></label><div><select id="f-type" name="문의유형" required><option value="">선택해 주세요</option><option>무료 진단 상담 신청</option><option>수강·시간표 문의</option><option>교습비 문의</option><option>기타 문의</option></select></div></div>
+  <div class="row"><label for="f-name">보호자 성함<i>*</i></label><div><input type="text" id="f-name" name="보호자성함" maxlength="30" required autocomplete="name"></div></div>
+  <div class="row"><label for="f-tel">연락처<i>*</i></label><div><input type="tel" id="f-tel" name="연락처" maxlength="20" placeholder="010-0000-0000" required autocomplete="tel"></div></div>
+  <div class="row"><label for="f-mail">이메일</label><div><input type="email" id="f-mail" name="email" maxlength="80" autocomplete="email"><p class="hint">선택 사항이에요. 이메일 답변을 원하시면 적어 주세요.</p></div></div>
+  <div class="row"><span class="lb">학생 학년 · 연락 시간</span><div class="two"><select name="학생학년" aria-label="학생 학년"><option value="">학년 선택</option><option>초1</option><option>초2</option><option>초3</option><option>초4</option><option>초5</option><option>초6</option><option>중1</option><option>중2</option><option>중3</option><option>기타</option></select><select name="희망연락시간" aria-label="희망 연락 시간"><option value="">연락 편한 시간</option><option>오전 (9~12시)</option><option>오후 (12~17시)</option><option>저녁 (17~21시)</option><option>언제든 괜찮아요</option></select></div></div>
+  <div class="row"><label for="f-title">제목<i>*</i></label><div><input type="text" id="f-title" name="제목" maxlength="80" required></div></div>
+  <div class="row"><label for="f-body">문의 내용<i>*</i></label><div><textarea id="f-body" name="문의내용" maxlength="3000" required placeholder="아이의 현재 상황이나 궁금하신 점을 편하게 적어 주세요."></textarea></div></div>
+</div>
+<div class="hp" aria-hidden="true"><input type="text" name="_honey" tabindex="-1" autocomplete="off"></div>
+
+<div class="agree">
+  <h2>개인정보 수집·이용 동의</h2>
+  <table>
+    <tr><th>수집 항목</th><td>필수: 보호자 성함, 연락처, 문의 내용 / 선택: 이메일, 학생 학년, 희망 연락 시간</td></tr>
+    <tr><th>이용 목적</th><td>상담 문의 확인 및 회신</td></tr>
+    <tr><th>보유 기간</th><td>상담 종료 후 수강 등록이 이루어지지 않은 경우 지체 없이 파기</td></tr>
+  </table>
+  <p>문의 내용은 메일 전송 서비스(FormSubmit, 해외 서비스)를 거쳐 교습소 이메일로 전달됩니다. 동의하지 않으셔도 전화로 상담하실 수 있으며, 동의하지 않으면 온라인 문의는 접수되지 않습니다. 자세한 내용은 <a href="privacy.html">개인정보처리방침</a>을 확인해 주세요.</p>
+  <label><input type="checkbox" id="f-agree" required> 위 내용에 동의합니다. (필수)</label>
+</div>
+
+<div class="actions"><button type="submit" class="btn p" id="f-send">문의 보내기</button><a href="tel:010-4667-8123" class="btn s">전화로 문의하기</a></div>
+<div class="msg" id="f-msg" role="status" aria-live="polite"></div>
+</form>
+</main>
+<footer class="ft">올셈수학교습소 · 교습소 신고번호 제3092호 · 사업자등록번호 620-92-02340<br>경기도 남양주시 별내동 826-6 불암타워 402호 · <a href="tel:010-4667-8123">010-4667-8123</a> · <a href="mailto:plus830418@naver.com">plus830418@naver.com</a><br><a href="terms.html">이용약관</a> · <a href="privacy.html"><b>개인정보처리방침</b></a></footer>
+<script>
+(function () {
+  var f = document.getElementById('qf'), btn = document.getElementById('f-send'), msg = document.getElementById('f-msg');
+  function show(ok, text) { msg.className = 'msg ' + (ok ? 'ok' : 'err'); msg.textContent = text; msg.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+  f.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var req = f.querySelectorAll('[required]');
+    for (var i = 0; i < req.length; i++) {
+      var el = req[i], bad = el.type === 'checkbox' ? !el.checked : !el.value.trim();
+      if (bad) { show(false, el.type === 'checkbox' ? '개인정보 수집·이용에 동의해 주세요.' : '필수 항목(*)을 모두 입력해 주세요.'); el.focus(); return; }
+    }
+    var tel = f.querySelector('#f-tel').value.replace(/[^0-9]/g, '');
+    if (tel.length < 9) { show(false, '연락처를 다시 확인해 주세요.'); f.querySelector('#f-tel').focus(); return; }
+    var data = {};
+    new FormData(f).forEach(function (v, k) { data[k] = v; });
+    data._subject = '[올셈수학 1:1 문의] ' + data['문의유형'] + ' - ' + data['제목'];
+    data._template = 'table';
+    data._captcha = 'false';
+    if (data.email) data._replyto = data.email;
+    btn.disabled = true; btn.textContent = '보내는 중…';
+    fetch('https://formsubmit.co/ajax/plus830418@naver.com', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(data)
+    }).then(function (r) { return r.json(); }).then(function (res) {
+      if (String(res.success) === 'true') {
+        f.reset();
+        show(true, '문의가 접수되었습니다. 확인 후 남겨주신 연락처로 연락드릴게요. 감사합니다.');
+      } else {
+        show(false, '지금은 온라인 문의를 보낼 수 없어요. 전화(010-4667-8123)나 이메일(plus830418@naver.com)로 문의해 주세요.');
+      }
+    }).catch(function () {
+      show(false, '전송 중 문제가 생겼어요. 전화(010-4667-8123)나 이메일(plus830418@naver.com)로 문의해 주세요.');
+    }).then(function () { btn.disabled = false; btn.textContent = '문의 보내기'; });
+  });
+})();
+</script>
+</body>
+</html>
