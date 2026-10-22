@@ -582,7 +582,7 @@ body.menu-open{overflow:hidden}
 <section class="notice" id="notice">
   <div class="wrap">
     <div class="rv"><h2>NOTICE</h2><p style="margin-top:12px;color:var(--body);font-size:15px;line-height:1.7">수업 소식과 공지는<br>올셈쌤 블로그에서 가장 먼저 전해요.</p><a href="https://blog.naver.com/byeollaemathteacher" target="_blank" rel="noopener" class="blogbtn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 3h16a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6l-2 3-2-3H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm3.5 4v7h2.6c1.6 0 2.6-.8 2.6-2.1 0-.9-.5-1.5-1.3-1.7.6-.3 1-.8 1-1.5 0-1.1-.9-1.7-2.3-1.7H7.5zm1.6 1.2h.9c.6 0 .9.3.9.7s-.3.8-.9.8h-.9V8.2zm0 2.6h1c.7 0 1.1.3 1.1.8s-.4.9-1.1.9h-1v-1.7zM14 7v7h4v-1.3h-2.4V7H14z"/></svg>블로그 바로가기</a></div>
-    <ul class="nlist rv d1">
+    <ul class="nlist rv d1" id="nlist">
       <li><a href="https://blog.naver.com/byeollaemathteacher" target="_blank" rel="noopener"><time>2026.10.20</time><span>2026년 겨울방학 초등·중등 선행반 모집 안내</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
       <li><a href="https://blog.naver.com/byeollaemathteacher" target="_blank" rel="noopener"><time>2026.10.02</time><span>2학기 중간고사 대비 특강 시간표 안내</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
       <li><a href="https://blog.naver.com/byeollaemathteacher" target="_blank" rel="noopener"><time>2026.09.15</time><span>신규 등록 학생 무료 진단 상담 운영 안내</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
@@ -636,6 +636,23 @@ body.menu-open{overflow:hidden}
     es.forEach(function (e) { if (!e.isIntersecting) return; e.target.classList.add('in'); e.target.querySelectorAll('[data-to]').forEach(count); io.unobserve(e.target); });
   }, { threshold: .15, rootMargin: '0px 0px -8% 0px' });
   document.querySelectorAll('.rv').forEach(function (el) { io.observe(el); });
+
+  /* NOTICE: 네이버 블로그 최신 글 자동 표시 */
+  (function () {
+    var ul = document.getElementById('nlist'); if (!ul || !window.fetch) return;
+    var arrow = ul.querySelector('svg'); arrow = arrow ? arrow.outerHTML : '';
+    fetch('/api/notice').then(function (r) { return r.json(); }).then(function (d) {
+      if (!d || !d.items || !d.items.length) return;
+      ul.innerHTML = '';
+      d.items.forEach(function (it) {
+        var li = document.createElement('li'), a = document.createElement('a'), t = document.createElement('time'), s = document.createElement('span');
+        a.href = it.link; a.target = '_blank'; a.rel = 'noopener';
+        t.textContent = it.date; s.textContent = it.title;
+        a.appendChild(t); a.appendChild(s); a.insertAdjacentHTML('beforeend', arrow);
+        li.appendChild(a); ul.appendChild(li);
+      });
+    }).catch(function () {});
+  })();
 
   /* duplicate reviews for seamless loop */
   var tr = document.getElementById('rvtrack'); tr.innerHTML += tr.innerHTML;
