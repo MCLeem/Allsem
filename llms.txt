@@ -6,6 +6,8 @@
 - 상호: 올셈수학교습소 (교습소 신고번호 제3092호, 사업자등록번호 620-92-02340)
 - 주소: 경기도 남양주시 별내동 826-6 불암타워 402호
 - 전화: 010-4667-8123 (무료 진단 상담)
+- 이메일: plus830418@naver.com
+- 온라인 상담: https://allsem.vercel.app/inquiry.html (1:1 상담 문의)
 - 블로그: https://blog.naver.com/byeollaemathteacher
 - 홈페이지: https://allsem.vercel.app/
 
@@ -23,6 +25,7 @@
 
 ## 페이지
 - [메인](https://allsem.vercel.app/)
+- [1:1 상담 문의](https://allsem.vercel.app/inquiry.html)
 - [개인정보처리방침](https://allsem.vercel.app/privacy.html)
 - [이용약관](https://allsem.vercel.app/terms.html)
 
