@@ -125,6 +125,33 @@ body.menu-open{overflow:hidden}
 .st b{margin-top:8px;font-size:24px;font-weight:900;letter-spacing:-0.03em}
 .st.n1{left:2%;bottom:6%}.st.n2{left:32%;top:34%;width:166px;height:166px}.st.n3{left:62%;top:2%;width:180px;height:180px;background:radial-gradient(circle at 35% 30%,#FFE066,#FFB300 70%);color:var(--navy)}
 .st.n3 small{background:rgba(15,45,107,.12)}
+.stepc{position:relative;list-style:none;margin:0;padding:0}
+.stepc::before{content:"";position:absolute;left:33px;top:44px;bottom:44px;width:4px;border-radius:4px;background:linear-gradient(180deg,#6FB0FF,var(--blue) 55%,var(--yellow))}
+.stepc li{position:relative;display:grid;grid-template-columns:70px 1fr;gap:16px;align-items:center}
+.stepc li+li{margin-top:18px}
+.stepc .num{position:relative;z-index:1;display:grid;place-items:center;width:70px;height:70px;border-radius:50%;color:#fff;font-weight:800;font-size:19px;background:radial-gradient(circle at 32% 28%,#7CB8FF,var(--blue) 68%);border:5px solid #F5F8FE;box-shadow:0 14px 22px -10px rgba(26,99,230,.7),inset 0 -6px 10px rgba(0,0,0,.15)}
+.stepc .body{background:#fff;border-radius:18px;padding:20px 22px;display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;box-shadow:0 18px 30px -20px rgba(15,45,107,.35),0 2px 6px rgba(15,45,107,.06)}
+.stepc small{display:block;font-size:12px;font-weight:800;color:var(--blue);letter-spacing:.08em}
+.stepc b{display:block;margin-top:2px;font-size:21px;font-weight:800;letter-spacing:-0.03em;color:var(--ink)}
+.stepc p{margin-top:4px;font-size:15px;color:var(--body);line-height:1.55}
+.stepc .ico{display:grid;place-items:center;width:46px;height:46px;border-radius:14px;background:#EAF3FF;color:var(--blue)}
+.stepc .ico svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.stepc .last .num{color:var(--navy);background:radial-gradient(circle at 32% 28%,#FFF0A8,var(--yellow) 55%,#FFB300);box-shadow:0 14px 22px -10px rgba(255,170,0,.8),inset 0 -6px 10px rgba(160,90,0,.15)}
+.stepc .last .body{background:linear-gradient(135deg,#FFE36A,#FFC700);box-shadow:0 22px 36px -18px rgba(255,170,0,.7),0 2px 6px rgba(160,90,0,.1)}
+.stepc .last small{color:#7A4A00}
+.stepc .last b{font-size:24px;font-weight:900;color:var(--navy)}
+.stepc .last p{color:#3D2E00;font-weight:600}
+.stepc .last .ico{background:var(--navy);color:var(--yellow)}
+@media (max-width:760px){
+  .stepc::before{left:26px}
+  .stepc li{grid-template-columns:56px 1fr;gap:12px}
+  .stepc .num{width:56px;height:56px;font-size:16px;border-width:4px}
+  .stepc .body{padding:16px;grid-template-columns:1fr}
+  .stepc .ico{display:none}
+  .stepc b{font-size:19px}
+  .stepc .last b{font-size:21px}
+  .stepc p{font-size:14px}
+}
 .photos{position:relative;height:460px}
 .photos .ph{position:absolute;border-radius:28px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(15,45,107,.45)}
 .photos .ph img{width:100%;height:100%;object-fit:cover}
@@ -431,12 +458,11 @@ body.menu-open{overflow:hidden}
   <div class="wrap">
     <div class="sh rv"><span class="pill">1:1 CARE</span><h2><small>반 진도가 아니라 내 진도로,</small>개인별 <b>맞춤 수업</b></h2></div>
     <div class="flow">
-      <div class="steps rv d1">
-        <svg class="path" viewBox="0 0 500 460" preserveAspectRatio="none"><path d="M70 400 C 160 380, 200 300, 250 270 S 360 150, 410 90"/></svg>
-        <div class="st n1"><small>STEP 01</small><b>진단</b></div>
-        <div class="st n2"><small>STEP 02</small><b>맞춤 진도</b></div>
-        <div class="st n3"><small>STEP 03</small><b>오답 완성</b></div>
-      </div>
+      <ol class="stepc rv d1">
+        <li><span class="num">01</span><div class="body"><div><small>STEP 01</small><b>진단</b><p>첫 상담에서 현재 실력과 막힌 단원을 확인해요</p></div><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg></span></div></li>
+        <li><span class="num">02</span><div class="body"><div><small>STEP 02</small><b>맞춤 진도</b><p>진단 결과로 만든 개인별 진도표대로 수업해요</p></div><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V14M10 20V9M16 20V4M2 20h20"/></svg></span></div></li>
+        <li class="last"><span class="num">03</span><div class="body"><div><small>STEP 03</small><b>오답 완성</b><p>틀린 문제는 스스로 풀 수 있을 때까지 다시 풀어요</p></div><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span></div></li>
+      </ol>
       <div class="photos rv d2">
         <div class="ph p1"><img src="images/class-boy.jpg" alt="노트에 문제를 푸는 학생"></div>
         <div class="ph p2"><img src="images/class-raise-hand.jpg" alt="손을 들고 질문하는 학생"></div>
