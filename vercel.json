@@ -1,0 +1,5 @@
+{
+  "redirects": [
+    { "source": "/((?!maintenance\\.html|images/|robots\\.txt|_vercel/).*)", "destination": "/maintenance.html", "permanent": false }
+  ]
+}
